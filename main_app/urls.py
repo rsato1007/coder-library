@@ -20,5 +20,6 @@ urlpatterns = [
     # Delete Book Confirmation Page
     path('books/<int:pk>/delete', views.BookDelete.as_view(), name="book_delete"),
     # Update Book Info Page
+    path('books/<int:pk>/update', views.BookUpdate.as_view(), name="book_update"),
     # Search Results Page
 ]

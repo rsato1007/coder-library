@@ -49,3 +49,9 @@ class BookDelete(DeleteView):
     model = Book
     template_name = "delete_book.html"
     success_url = "/books/"
+
+class BookUpdate(UpdateView):
+    model = Book
+    fields = ['title', 'description', 'image', 'link', 'subject']
+    template_name = "update_book.html"
+    success_url = "/books/"
