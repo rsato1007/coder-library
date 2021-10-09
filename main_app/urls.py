@@ -8,7 +8,7 @@ This is be all our URLs, let's start formulating what URLs I will need.
 # this like app.use() in express
 urlpatterns = [
     # Home Page
-    path('', views.Temp.as_view(), name="home"),
+    path('', views.Home.as_view(), name="home"),
     # About Page
     path('about/', views.Temp.as_view(), name="about"),
     # All Books Page
