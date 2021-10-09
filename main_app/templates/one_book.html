@@ -6,4 +6,6 @@
 <p>Authors:</p>
 <p>Subject: {{book.subject}}</p>
 <div><a href="{{book.link}}">Buy Book</a></div>
+<div><a href="">Update Book Information</a></div>
+<div><a href="{% url 'book_delete' book.pk %}">Delete Recommendation</a></div>
 {% endblock %}

@@ -38,3 +38,8 @@ class BookList(TemplateView):
 class BookDetail(DetailView):
     model = Book
     template_name = "one_book.html"
+
+class BookDelete(DeleteView):
+    model = Book
+    template_name = "delete_book.html"
+    success_url = "/books/"
