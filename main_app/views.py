@@ -35,6 +35,12 @@ class BookList(TemplateView):
         context["books"] = Book.objects.all()
         return context
 
+class BookCreate(CreateView):
+    model = Book
+    fields = ['title', 'description', 'image', 'link', 'subject']
+    template_name = "add_book.html"
+    success_url = "/books/"
+
 class BookDetail(DetailView):
     model = Book
     template_name = "one_book.html"

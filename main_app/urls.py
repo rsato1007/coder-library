@@ -16,6 +16,7 @@ urlpatterns = [
     # One Book Page
     path('books/<int:pk>/', views.BookDetail.as_view(), name="book_detail"),
     # Add Book Page
+    path('books/new/', views.BookCreate.as_view(), name="book_create"),
     # Delete Book Confirmation Page
     path('books/<int:pk>/delete', views.BookDelete.as_view(), name="book_delete"),
     # Update Book Info Page

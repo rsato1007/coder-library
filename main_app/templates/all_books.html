@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>All Books</h1>
-<div>Have a recommendation? <a href="">Add It</a></div>
+<div>Have a recommendation? <a href="{% url 'book_create' %}">Add It</a></div>
 <div>
     {% for book in books %}
     <a href="{% url 'book_detail' book.pk %}"><img src="{{book.image}}" alt="book"></a>
