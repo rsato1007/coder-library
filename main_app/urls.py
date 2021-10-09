@@ -10,10 +10,11 @@ urlpatterns = [
     # Home Page
     path('', views.Home.as_view(), name="home"),
     # About Page
-    path('about/', views.Temp.as_view(), name="about"),
+    path('about/', views.About.as_view(), name="about"),
     # All Books Page
-    path('books/', views.Temp.as_view(), name="books"),
+    path('books/', views.BookList.as_view(), name="books"),
     # One Book Page
+    path('books/<int:pk>/', views.BookDetail.as_view(), name="book_detail"),
     # Add Book Page
     # Delete Book Confirmation Page
     # Update Book Info Page
