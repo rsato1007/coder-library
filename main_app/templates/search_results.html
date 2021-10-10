@@ -3,6 +3,8 @@
     <h1>Search Results</h1>
     {% for book in object_list %}
         <p>{{book.title}}</p>
+        <a href="{% url 'book_detail' book.pk %}">Click for more detail</a>
+        <a href="{{book.link}}"><img src="{{book.image}}" alt="{{book.title}}"></a>
     {% empty %}
         <p>No Results</p>
     {% endfor %}

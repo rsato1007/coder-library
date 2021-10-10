@@ -5,7 +5,7 @@
 </div>
 <h1>Today's Recommendations</h1>
 {% for book in books %}
-  <img src="{{book.image}}" alt="{{book.title}}">
+  <a href="{{book.link}}"><img src="{{book.image}}" alt="{{book.title}}"></a>
 {% endfor %}
 <h1>Search By Subject</h1>
 {% for subject in subjects %}
