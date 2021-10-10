@@ -26,6 +26,7 @@ class Home(CreateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["subjects"] = Subject.objects.all()
+        context["books"] = Book.objects.all()[:4]
         return context
 
 class About(TemplateView):

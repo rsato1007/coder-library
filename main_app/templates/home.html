@@ -4,6 +4,9 @@
     Increase Your Knowledge of Programming
 </div>
 <h1>Today's Recommendations</h1>
+{% for book in books %}
+  <img src="{{book.image}}" alt="{{book.title}}">
+{% endfor %}
 <h1>Search By Subject</h1>
 {% for subject in subjects %}
 
