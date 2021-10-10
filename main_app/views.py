@@ -77,3 +77,12 @@ class SubjectDetail(ListView):
     def get_queryset(self):
         self.subject = Subject.objects.get(pk=self.kwargs.get('pk'))
         return Book.objects.filter(subject=self.subject)
+
+# All Author based views
+class AuthorList(TemplateView):
+    template_name = "all_authors.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["authors"] = Author.objects.all()
+        return context

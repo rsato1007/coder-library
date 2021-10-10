@@ -22,7 +22,6 @@ class Book(models.Model):
 class Author(models.Model):
     name = models.CharField(max_length=100)
     bio = models.CharField(max_length=500)
-    image = models.CharField(max_length=100)
     books = models.ManyToManyField(Book)
 
     def __str__(self):
