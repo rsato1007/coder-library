@@ -22,4 +22,7 @@ urlpatterns = [
     # Update Book Info Page
     path('books/<int:pk>/update', views.BookUpdate.as_view(), name="book_update"),
     # Search Results Page
+    path ('search/', views.BookSearch.as_view(), name="book_search"),
+    # All Subject Based URLs
+    path('subjects/<int:pk>', views.SubjectDetail.as_view(), name="subject_detail")
 ]

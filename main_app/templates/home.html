@@ -5,6 +5,11 @@
 </div>
 <h1>Today's Recommendations</h1>
 <h1>Search By Subject</h1>
+{% for subject in subjects %}
+
+  <div><a href="{% url 'subject_detail' subject.pk %}">{{subject.name}}</a></div>
+
+{% endfor %}
 <p>Don't See Your Subject? <p class="subject-form show-subject-form">Click here to add it!</p></p>
 <form method="post" class="subject-form">
     <!-- Security Feature  -->

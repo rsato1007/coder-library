@@ -16,8 +16,14 @@ class Book(models.Model):
     # We'll be using many to one here. (many books to one subject)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE, related_name="subject")
 
+    def __str__(self):
+        return self.title
+
 class Author(models.Model):
     name = models.CharField(max_length=100)
     bio = models.CharField(max_length=500)
     image = models.CharField(max_length=100)
     books = models.ManyToManyField(Book)
+
+    def __str__(self):
+        return self.name
