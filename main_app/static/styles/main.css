@@ -1,7 +1,40 @@
+* {
+    margin: 0;
+}
+
 body {
-    background-color: #282c34;
+    background: rgb(238, 238, 238);
+}
+
+.nav-bar-container {
+    background-color: black;
     color: white;
-    padding: 40px;
-    font-family: Arial;
-    text-align: center;
-  }
+    margin: 0;
+    padding: 0.8em 0.5em;
+    font-family: 'Space Mono', monospace;
+    list-style-type: none;
+    height: 30px;
+}
+
+.nav-bar-name {
+    float: left;
+}
+
+.nav-bar-links {
+    float: right;
+    padding-right: .5em;
+}
+
+.nav-bar-link {
+    text-decoration: none;
+    color: white;
+    padding-right: .3em;
+}
+
+.nav-bar-link:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: inline-block;
+}
