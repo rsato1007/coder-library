@@ -97,3 +97,9 @@ class AuthorDelete(DeleteView):
     model = Author
     template_name = "delete_author.html"
     success_url = "/author/"
+
+class AuthorUpdate(UpdateView):
+    model = Author
+    fields = ['name', 'bio', 'books']
+    template_name = "update_author.html"
+    success_url = "/author/"

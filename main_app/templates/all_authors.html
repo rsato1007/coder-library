@@ -5,7 +5,7 @@
 {% for author in authors %}
     <p>{{author.name}}</p>
     <a href="{% url 'author_delete' author.pk %}"><div>X</div></a>
-    <div>Edit</div> 
+    <a href="{% url 'author_update' author.pk %}"><div>Edit</div></a>
     <ul>
         {% for book in author.books.all %}
         <li>{{book.title}}</li>
