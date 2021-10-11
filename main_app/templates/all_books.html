@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>All Books</h1>
+<h1 class="section-header">All Books</h1>
 <div>Have a recommendation? <a href="{% url 'book_create' %}">Add It</a></div>
 <div>
     {% for book in books %}

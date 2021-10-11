@@ -1,10 +1,24 @@
 * {
     margin: 0;
+    font-family: 'Space Mono', monospace;
 }
 
 body {
     background: rgb(238, 238, 238);
 }
+
+/* FORMATTING THAT APPLIES TO ALL PAGES  */
+
+.section-header {
+    text-align: center;
+    padding: 0.5em;
+    background-color: black;
+    color: white;
+    margin: 0.4em 40%;
+    font-size: 25px;
+}
+
+/* NAV BAR STYLING SECTION START */
 
 .nav-bar-container {
     background-color: black;
@@ -38,3 +52,50 @@ body {
 .search-bar {
     display: inline-block;
 }
+
+/* NAV BAR STYLING SECTION END */
+
+/* HOME PAGE STYLING SECTION START */
+
+.home-banner {
+    height: 100px;
+    width: 100%;
+    background-color: #c4c4c4;
+}
+
+.recommended-books-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em 0;
+}
+
+.recommend-book-image {
+    height: 400px;
+    width: 300px;
+}
+
+.subject-box-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em 0;
+}
+
+.subject-box {
+    background-color: black;
+    height: 3em;
+    width: 18em;
+    line-height: 3em;
+    text-align: center;
+}
+
+.subject-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subject-link:hover {
+    text-decoration: underline;
+}
+
+/* HOME PAGE STYLING SECTION END */

@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-<div>
+<div class="home-banner">
     Increase Your Knowledge of Programming
 </div>
-<h1>Today's Recommendations</h1>
-{% for book in books %}
-  <a href="{{book.link}}"><img src="{{book.image}}" alt="{{book.title}}"></a>
-{% endfor %}
-<h1>Search By Subject</h1>
-{% for subject in subjects %}
+<h1 class="section-header">Today's Recommendations</h1>
+<div class="recommended-books-container">
+  {% for book in books %}
+    <a href="{{book.link}}"><img src="{{book.image}}" alt="{{book.title}}" class="recommend-book-image"></a>
+  {% endfor %}
+</div>
+<hr>
+<h1 class="section-header">Search By Subject</h1>
+<div class="subject-box-container">
+  {% for subject in subjects %}
 
-  <div><a href="{% url 'subject_detail' subject.pk %}">{{subject.name}}</a></div>
+    <div class="subject-box"><a href="{% url 'subject_detail' subject.pk %}" class="subject-link">{{subject.name}}</a></div>
 
-{% endfor %}
+  {% endfor %}
+</div>
 <p>Don't See Your Subject? <p class="subject-form show-subject-form">Click here to add it!</p></p>
 <form method="post" class="subject-form">
     <!-- Security Feature  -->
