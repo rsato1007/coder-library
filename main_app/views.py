@@ -92,3 +92,8 @@ class AuthorCreate(CreateView):
     fields = ['name', 'bio', 'books']
     template_name = "add_book.html"
     success_url = "/author/"
+
+class AuthorDelete(DeleteView):
+    model = Author
+    template_name = "delete_author.html"
+    success_url = "/author/"
