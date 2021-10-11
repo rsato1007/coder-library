@@ -7,4 +7,3 @@ let formEl = document.querySelector(".show-subject-form");
 formEl.addEventListener("click", e => {
     showHideForm(e)
 });
-
