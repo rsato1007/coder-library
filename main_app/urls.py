@@ -24,4 +24,5 @@ urlpatterns = [
 
     # All Author Based URLs
     path('author/', views.AuthorList.as_view(), name="authors"),
+    path('author/new/', views.AuthorCreate.as_view(), name='author_create'),
 ]

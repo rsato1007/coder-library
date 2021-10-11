@@ -1,9 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Welcome to add author</h1>
+<h1>All Authors</h1>
+<p>Did we miss an author? <a href="{% url 'author_create' %}">Add Them</a></p>
 {% for author in authors %}
-
     <p>{{author.name}}</p>
+    <div>X</div>
+    <div>Edit</div> 
+    <ul>
+        {% for book in author.books.all %}
+        <li>{{book.title}}</li>
+        {% endfor %}
+    </ul>
 
 {% endfor %}
 

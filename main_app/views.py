@@ -86,3 +86,9 @@ class AuthorList(TemplateView):
         context = super().get_context_data(**kwargs)
         context["authors"] = Author.objects.all()
         return context
+
+class AuthorCreate(CreateView):
+    model = Author
+    fields = ['name', 'bio', 'books']
+    template_name = "add_book.html"
+    success_url = "/author/"
